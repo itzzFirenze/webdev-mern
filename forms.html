@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Event Registration</title>
+</head>
+
+<body>
+   <h1>Event Registration Form</h1>
+   <form action="submit.php" method="post">
+
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required><br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required><br><br>
+
+      <label for="attendees">No. of attendees:</label>
+      <input type="number" id="attendees" name="attendees" min="1" max="10" required><br><br>
+
+      <label for="eventDate">Event Date:</label>
+      <input type="date" id="eventDate" name="eventDate" required><br><br>
+
+      <label for="eventTime">Event Time:</label>
+      <input type="time" id="eventTime" name="eventTime" required><br><br>
+
+      <label for="eventType">Event Type:</label><br>
+      <select id="eventType" name="eventType" required>
+         <option value="" disabled selected>Select an event type</option>
+         <option value="conference">Conference</option>
+         <option value="workshop">Workshop</option>
+         <option value="webinar">Webinar</option>
+      </select><br><br>
+
+      <label for="dietary">Dietary Restrictions:</label><br>
+      <input type="checkbox" id="vegetarian" name="dietary[]" value="vegetarian">
+      <label for="vegetarian">Vegetarian</label><br>
+      <input type="checkbox" id="gluten" name="dietary[]" value="gluten">
+      <label for="gluten">Gluten-Free</label><br>
+
+      <label for="tshirtSize">T-Shirt Size:</label><br>
+      <input type="radio" id="sizeS" name="tshirtSize" value="S" required>
+      <label for="sizeS">S</label>
+      <input type="radio" id="sizeM" name="tshirtSize" value="M">
+      <label for="sizeM">M</label>
+      <input type="radio" id="sizeL" name="tshirtSize" value="L">
+      <label for="sizeL">L</label>
+      <input type="radio" id="sizeXL" name="tshirtSize" value="XL">
+      <label for="sizeXL">XL</label><br><br>
+
+      <label for="comments">Comments:</label><br>
+      <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+      <button type="submit">Register</button>
+   </form>
+</body>
+
+</html>
